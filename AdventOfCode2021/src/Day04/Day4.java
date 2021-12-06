@@ -17,7 +17,7 @@ public class Day4 {
                 .boxed()
                 .collect(Collectors.toList());
         initBoards(args);
-        playBingo1(numbersCalled);
+        //playBingo1(numbersCalled);
         playBingo2(numbersCalled);
     }
 
@@ -62,6 +62,7 @@ public class Day4 {
                 .filter(x -> x.getWinOrder()>0)
                 .sorted(Comparator.comparingInt(Day4Board::getWinOrder).reversed())
                 .collect(Collectors.toList());
-        System.out.println("BINGO: " + result.get(1).getWinNumber()*result.get(1).sumOfUnmarkedNumbers());
+        System.out.println(result.get(0).getWinOrder());
+        System.out.println("BINGO: " + result.get(0).getWinNumber()*result.get(0).sumOfUnmarkedNumbers());
     }
 }
