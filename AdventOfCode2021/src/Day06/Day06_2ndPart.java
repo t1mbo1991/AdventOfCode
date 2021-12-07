@@ -49,7 +49,6 @@ public class Day06_2ndPart {
         for(int i=1;i<9;i++){
             summe+=daysLeft[i];
         }
-
         System.out.println(summe);
     }
 
